@@ -1,6 +1,6 @@
-# Terraform-moudules-vault
+# Terraform-modules-vault
 
-AWS 환경 구성과 Vault 환경을 구성하는 Moudules 모음입니다.
+AWS 환경 구성과 Vault 환경을 구성하는 Modules 모음입니다.
 
 - `terraform-aws-network`
 - `terraform-aws-ssh-key-pair`
