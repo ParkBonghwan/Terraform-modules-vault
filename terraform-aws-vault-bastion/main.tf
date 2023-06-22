@@ -72,7 +72,7 @@ locals {
 
 module "ssh_keypair_aws" {
   count  = var.create && !var.ssh_key_override ? 1 : 0
-  source = "github.com/daeung0921/terraform-aws-ssh-key-pair"
+  source = "github.com/ParkBonghwan/Terraform-modules-vault/terraform-aws-ssh-key-pair"
   name   = var.name
 }
 

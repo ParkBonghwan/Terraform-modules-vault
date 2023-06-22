@@ -32,5 +32,5 @@
 
 ## Submodules
 
-- github.com/daeung0921/terraform-aws-ssh-key-pair
+- github.com/ParkBonghwan/Terraform-modules-vault/terraform-aws-ssh-key-pair
 - terraform-aws-modules/ec2-instance/aws

@@ -1,5 +1,9 @@
 data "aws_availability_zones" "main" {}
 
+################################################################################
+# aws_vpc 생성
+# count는 조건문으로, "var.create", "var.create_vpc" 모두 true 일 때 생성
+################################################################################
 resource "aws_vpc" "main" {
   count = var.create && var.create_vpc ? 1 : 0
 
@@ -9,6 +13,10 @@ resource "aws_vpc" "main" {
   tags = merge(var.tags, { "Name" = format("%s", var.name) })
 }
 
+################################################################################
+# aws_subnet 생성
+# count는 조건문으로, "var.create" 값이 true이고 "var.vpc_cidrs_public" 이 존재할 때 생성
+################################################################################
 resource "aws_subnet" "public" {
   count = var.create ? length(var.vpc_cidrs_public) : 0
 
@@ -20,6 +28,10 @@ resource "aws_subnet" "public" {
   tags = merge(var.tags, { "Name" = format("%s-public-%d", var.name, count.index + 1) })
 }
 
+################################################################################
+# aws_subnet 생성
+# count는 조건문으로, "var.create" 값이 true이고 "var.vpc_cidrs_public" 이 존재할 때 생성
+################################################################################
 resource "aws_internet_gateway" "main" {
   count  = var.create ? 1 : 0
   vpc_id = var.create_vpc ? aws_vpc.main[0].id : var.vpc_id

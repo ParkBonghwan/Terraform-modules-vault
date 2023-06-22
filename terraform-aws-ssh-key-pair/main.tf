@@ -1,5 +1,5 @@
 module "tls_private_key" {
-  source   = "github.com/daeung0921/terraform-tls-private-key"
+  source   = "github.com/ParkBonghwan/Terraform-modules-vault/terraform-tls-private-key"
   create   = var.create
   name     = var.name
   rsa_bits = var.rsa_bits

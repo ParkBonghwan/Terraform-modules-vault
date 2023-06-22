@@ -26,5 +26,6 @@
 
 ## Submodules
 
-- [TLS Private Key Terraform Module](https://github.com/daeung0921/terraform-tls-private-key)
+- [TLS Private Key Terraform Module](https://github.com/ParkBonghwan/Terraform-modules-vault/terraform-tls-private-key)
+- `안쓰는 중`
   
